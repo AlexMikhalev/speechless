@@ -1,6 +1,7 @@
 from distutils.core import setup
 
-from pip.req import parse_requirements
+with open("requirements.txt") as reqs_file:
+    reqs = reqs_file.readlines()
 
 setup(
     name='speechless',
@@ -11,5 +12,5 @@ setup(
     author='Julius Kunze',
     author_email='juliuskunze@gmail.com',
     description='',
-    install_requires=[str(r.req) for r in parse_requirements("requirements.txt", session=False)]
+    install_requires=[str(r.req) for r in reqs]
 )
