@@ -12,5 +12,5 @@ setup(
     author='Julius Kunze',
     author_email='juliuskunze@gmail.com',
     description='',
-    install_requires=[str(r.req) for r in reqs]
+    install_requires=reqs
 )
